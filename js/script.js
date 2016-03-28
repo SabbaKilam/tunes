@@ -1,3 +1,4 @@
+var base = "https://googledrive.com/host/0B4HC-e3WTADpfndhQkpFWDY0NUxhRDZlRzVYcmF6aE9hSG9GOWtPSmdXUEF1NV9zYmhha0k/";
 var shuffleBtn = O("shuffleBtn");
 var songSelection = O("songSelection");
 var audioPlayer = O("audioPlayer");
@@ -142,10 +143,10 @@ function removeArrayMember(array, index){
 //pure side effect: audio source chosen for player
 function chooseMp3OrOgg(file_name){
     if( supportsMp3() ){
-        audioPlayer.src = "music/" + file_name + ".mp3";        
+        audioPlayer.src = base + "music/" + file_name + ".mp3";        
     }
     else if( supportsOgg() ){
-        audioPlayer.src = "music/" + file_name + ".ogg";            
+        audioPlayer.src = base + "music/" + file_name + ".ogg";            
     }
     else{
         audioPlayer.src = "";
